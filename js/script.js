@@ -87,8 +87,10 @@ answersFormEl.addEventListener('submit', function (e) {
     // Show message to user
     if (guessedNumbers == []) {
         messageEl.innerText = "Non hai indovinato nessun numero :(";
+    } else if (JSON.stringify(guessedNumbers) == JSON.stringify(randomNumbers)) {
+        messageEl.innerText = "Complimenti! Hai indovinato tutti i numeri :)";
     } else {
-        messageEl.innerText = `Hai indovinato i seguenti numeri: ${guessedNumbers.join(", ")}`
+        messageEl.innerText = `Hai indovinato i seguenti numeri: ${guessedNumbers.join(", ")}`;
     }
 
 })
