@@ -89,8 +89,12 @@ answersFormEl.addEventListener('submit', function (e) {
         messageEl.innerText = "Non hai indovinato nessun numero :(";
     } else if (JSON.stringify(guessedNumbers) == JSON.stringify(randomNumbers)) {
         messageEl.innerText = "Complimenti! Hai indovinato tutti i numeri :)";
+        messageEl.classList.remove("text-danger");
+        messageEl.classList.add("text-success");
     } else {
         messageEl.innerText = `Hai indovinato i seguenti numeri: ${guessedNumbers.join(", ")}`;
+        messageEl.classList.remove("text-danger");
+        messageEl.classList.add("text-warning");
     }
 
 })
