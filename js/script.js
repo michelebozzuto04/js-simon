@@ -1,4 +1,4 @@
-// Get Elements from he DOM
+// Get elements from the DOM
 const timerEl = document.getElementById("timer");
 const countdownEl = document.getElementById("countdown");
 const numberListEl = document.getElementById("numbers-list");
@@ -23,7 +23,7 @@ function countdownTimer(duration) {
     }, 1000);
 }
 
-// Generate Random Numbers
+// Generate random numbers
 function generateRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -33,6 +33,14 @@ for (let i = 0; i < 5; i++) {
     randomNumbers[i] = generateRandom(1, 50);
     numberListEl.innerHTML += `<li>${randomNumbers[i]}</li>`
 }
+
+// Change layout after 30 seconds
+setTimeout(function () {
+    countdownEl.classList.add("d-none");
+    instructionsEl.classList.add("d-none");
+    numberListEl.classList.add("d-none");
+    answersFormEl.classList.remove("d-none");
+}, 30000)
 
 // Show Output
 countdownTimer(30);
