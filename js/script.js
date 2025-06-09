@@ -90,6 +90,5 @@ answersFormEl.addEventListener('submit', function (e) {
     } else {
         messageEl.innerText = `Hai indovinato i seguenti numeri: ${guessedNumbers.join(", ")}`
     }
-    console.log(messageEl);
 
 })
