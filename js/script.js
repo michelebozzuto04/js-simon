@@ -33,7 +33,7 @@ function countdownTimer(duration) {
         }
     }, 1000);
 }
-countdownTimer(5);
+countdownTimer(30);
 
 // Generate random numbers
 function generateRandom(min, max) {
@@ -55,7 +55,7 @@ setTimeout(function () {
     instructionsEl.innerText = "Indovina i numeri";
     numberListEl.classList.add("d-none");
     answersFormEl.classList.remove("d-none");
-}, 5000)
+}, 30000)
 
 // Add event listener to form element
 answersFormEl.addEventListener('submit', function (e) {
